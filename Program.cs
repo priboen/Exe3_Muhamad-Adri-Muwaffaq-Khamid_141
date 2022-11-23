@@ -34,6 +34,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
             else
                 return false;
         }
+        public bool listEmpty()
+        {
+            if (LAST == null)
+                return true;
+            else
+                return false;
+        }
     }
     internal class Program
     {
