@@ -104,6 +104,12 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                                 int num = Convert.ToInt32(Console.ReadLine());
                                 if (obj.Search(num, ref prev, ref curr) == false)
                                     Console.WriteLine("\n Record not found");
+                                else
+                                {
+                                    Console.WriteLine("Record found");
+                                    Console.WriteLine("Roll number : " + curr.rollNumber);
+                                    Console.WriteLine("Name        : " + curr.name);
+                                }
                             }
                             break;
                         case '3':
