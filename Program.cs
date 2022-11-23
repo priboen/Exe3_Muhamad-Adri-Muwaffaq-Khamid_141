@@ -129,7 +129,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
 
                 catch (Exception e)
                 {
-
+                    Console.WriteLine(e.ToString());
                 }
             }
         }
