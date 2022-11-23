@@ -98,6 +98,8 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                                     Console.WriteLine("\nList is empty");
                                     break;
                                 }
+                                Node prev, curr;
+                                prev = curr = null;
                             }
                             break;
                         case '3':
