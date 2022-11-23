@@ -100,6 +100,8 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                                 }
                                 Node prev, curr;
                                 prev = curr = null;
+                                Console.Write("\nEnter the roll number of the student whose record is to be searched : ");
+                                int num = Convert.ToInt32(Console.ReadLine());
                             }
                             break;
                         case '3':
