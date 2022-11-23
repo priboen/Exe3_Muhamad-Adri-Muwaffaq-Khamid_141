@@ -206,6 +206,11 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                                 }
                             }
                             break;
+                        case '5':
+                            {
+                                obj.firstNode();
+                            }
+                            break;
                         default:
                             {
                                 Console.WriteLine("Invalid Option.");
