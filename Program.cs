@@ -155,7 +155,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             break;
                         case '3':
                             {
-                                obj.firstNode();
+                                obj.traverse();
                             }
                             break;
                         case '4':
