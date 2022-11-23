@@ -41,6 +41,18 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
             else
                 return false;
         }
+        public void traverse()
+        {
+            if (listEmpty())
+                Console.Write("\nList is empty");
+            else
+            {
+                Console.WriteLine("\nRecords in the list are : \n");
+                Node currentNode;
+                currentNode = LAST.next;
+                
+            }
+        }
     }
     internal class Program
     {
