@@ -50,6 +50,11 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                 Console.WriteLine("\nRecords in the list are : \n");
                 Node currentNode;
                 currentNode = LAST.next;
+                while (currentNode != LAST)
+                {
+                    Console.Write(currentNode.rollNumber + "   " + currentNode.name + "\n");
+                    currentNode = currentNode.next;
+                }
                 Console.Write(LAST.rollNumber + "   " + LAST.name + "\n");
                 
             }
