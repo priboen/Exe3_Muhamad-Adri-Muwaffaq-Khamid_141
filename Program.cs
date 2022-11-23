@@ -87,6 +87,9 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                     switch (ch)
                     {
                         case '1':
+                            {
+                                obj.traverse();
+                            }
                             break;
                         case '2':
                             break;
