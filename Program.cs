@@ -46,6 +46,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
     {
         static void Main(string[] args)
         {
+            CircularList obj = new CircularList();
         }
     }
 }
