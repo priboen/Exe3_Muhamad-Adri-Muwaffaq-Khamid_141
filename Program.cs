@@ -51,6 +51,12 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
             {
                 try
                 {
+                    Console.WriteLine("\nMenu");
+                    Console.WriteLine("1. View all the records in the list.");
+                    Console.WriteLine("2. Search for the record in the list.");
+                    Console.WriteLine("3. Display the first record in the list.");
+                    Console.WriteLine("4. Exit");
+                    Console.Write("\nEnter your choice (1-4) : ");
 
                 }
 
