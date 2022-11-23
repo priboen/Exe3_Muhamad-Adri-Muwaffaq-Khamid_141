@@ -21,7 +21,46 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
         {
             LAST = null;
         }
+        public void insertData()
+        {
+            int nim;
+            string nm;
+            Console.WriteLine("\nEnter the roll number of the student: ");
+            nim = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("\nEnter the name of the student");
+            nm = Console.ReadLine();
+            Node newNode = new Node();
+            newNode.rollNumber = nim;
+            newNode.name = nm;
 
+            if (LAST == null || nim <= LAST.rollNumber)
+            {
+                if ((LAST != null) && (nim == LAST.rollNumber))
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                newNode.next = LAST;
+                LAST = newNode;
+                return;
+            }
+            Node previous, current;
+            previous = LAST.next;
+            current = LAST.next;
+
+            while ((current != null) && (nim >= current.rollNumber))
+            {
+                if (nim == current.rollNumber)
+                {
+                    Console.WriteLine();
+                    return;
+                }
+                previous.next = current;
+                previous.next = newNode;
+            }
+            newNode.next = LAST.next;
+            LAST.next = newNode;
+        }
         public bool Search(int rollNo, ref Node previous, ref Node current)
         {
             for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
@@ -90,7 +129,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                     {
                         case '1':
                             {
-                                obj.traverse();
+                                obj.insertData();
                             }
                             break;
                         case '2':
