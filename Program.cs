@@ -86,16 +86,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                 Console.Write("\nList is empty");
             else
             {
-                Console.WriteLine("\nRecords in the list are : \n");
+                Console.WriteLine("\n Record in the list are : \n");
                 Node currentNode;
                 currentNode = LAST.next;
-                while (currentNode != LAST)
-                {
-                    Console.Write(currentNode.rollNumber + "   " + currentNode.name + "\n");
-                    currentNode = currentNode.next;
-                }
-                Console.Write(LAST.rollNumber + "   " + LAST.name + "\n");
-                
+                for (currentNode = LAST; currentNode != null; currentNode = currentNode.next)
+                    Console.Write(currentNode.rollNumber + " " + currentNode.name + "\n");
+                Console.WriteLine();
+
             }
         }
         public void firstNode()
