@@ -59,6 +59,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                 
             }
         }
+        public void firstNode()
+        {
+            if (listEmpty())
+                Console.WriteLine("\nList is empty");
+            else
+                Console.WriteLine("\n The first record in the list is: \n\n" + LAST.next.rollNumber + "    " + LAST.next.name);
+        }
     }
     internal class Program
     {
