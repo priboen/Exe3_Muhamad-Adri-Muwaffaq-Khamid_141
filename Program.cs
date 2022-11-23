@@ -57,7 +57,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                     Console.WriteLine("3. Display the first record in the list.");
                     Console.WriteLine("4. Exit");
                     Console.Write("\nEnter your choice (1-4) : ");
-
+                    char ch = Convert.ToChar(Console.ReadLine());
                 }
 
                 catch (Exception e)
