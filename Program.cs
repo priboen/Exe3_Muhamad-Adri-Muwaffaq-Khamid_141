@@ -92,6 +92,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             }
                             break;
                         case '2':
+                            {
+                                if (obj.listEmpty() == true)
+                                {
+                                    Console.WriteLine("\nList is empty");
+                                    break;
+                                }
+                            }
                             break;
                         case '3':
                             break;
