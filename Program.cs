@@ -61,6 +61,41 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
             newNode.next = LAST.next;
             LAST.next = newNode;
         }
+        public bool deleteNode(int rollNo)
+        {
+            Node previous, current;
+            previous = current = null;
+            if (Search(rollNo, ref previous, ref current) == false)
+                return false;
+            if (rollNo == LAST.next.rollNumber)
+            {
+                current = LAST.next;
+                LAST.next = current.next;
+                return true;
+            }
+            if (rollNo == LAST.rollNumber)
+            {
+                current = LAST;
+                previous = current.next;
+                while (previous.next != LAST)
+                    previous = previous.next;
+                previous.next = LAST.next;
+                LAST = previous;
+                return true;
+            }
+            if (rollNo <= LAST.rollNumber)
+            {
+                current = LAST.next;
+                previous = LAST.next;
+                while (rollNo > current.rollNumber || previous == LAST)
+                {
+                    previous = current;
+                    current = current.next;
+                }
+                previous.next = current.next;
+            }
+            return true;
+        }
         public bool Search(int rollNo, ref Node previous, ref Node current)
         {
             for (previous = current = LAST.next; current != LAST; previous = current, current = current.next)
@@ -71,7 +106,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
             if (rollNo == LAST.rollNumber)
                 return true;
             else
-                return false;
+                return (false);
         }
         public bool listEmpty()
         {
@@ -131,23 +166,18 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             break;
                         case '2':
                             {
-                                if (obj.listEmpty() == true)
+                                if (obj.listEmpty())
                                 {
                                     Console.WriteLine("\nList is empty");
                                     break;
                                 }
-                                Node prev, curr;
-                                prev = curr = null;
-                                Console.Write("\nEnter the roll number of the student whose record is to be searched : ");
-                                int num = Convert.ToInt32(Console.ReadLine());
-                                if (obj.Search(num, ref prev, ref curr) == false)
-                                    Console.WriteLine("\n Record not found");
+                                Console.Write("Enter the roll number of the student" + " " + "whose record is to be deleted: ");
+                                int rollNo = Convert.ToInt32(Console.ReadLine());
+                                Console.WriteLine();
+                                if (obj.deleteNode(rollNo) == false)
+                                    Console.WriteLine("record not found");
                                 else
-                                {
-                                    Console.WriteLine("Record found");
-                                    Console.WriteLine("Roll number : " + curr.rollNumber);
-                                    Console.WriteLine("Name        : " + curr.name);
-                                }
+                                    Console.WriteLine("Record with roll number" + "  " + rollNo + " " + "deleted\n");
                             }
                             break;
                         case '3':
