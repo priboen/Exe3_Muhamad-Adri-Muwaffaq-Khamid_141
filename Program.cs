@@ -161,11 +161,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                     {
                         case '1':
                             {
+                                Console.Clear();
                                 obj.insertData();
                             }
                             break;
                         case '2':
                             {
+                                Console.Clear();
                                 if (obj.listEmpty())
                                 {
                                     Console.WriteLine("\nList is empty");
@@ -182,11 +184,13 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             break;
                         case '3':
                             {
+                                Console.Clear();
                                 obj.traverse();
                             }
                             break;
                         case '4':
                             {
+                                Console.Clear();
                                 if (obj.listEmpty() == true)
                                 {
                                     Console.WriteLine("\nList is empty");
@@ -208,6 +212,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             break;
                         case '5':
                             {
+                                Console.Clear();
                                 obj.firstNode();
                             }
                             break;
@@ -223,7 +228,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
 
                 catch (Exception e)
                 {
-                    Console.WriteLine("Please kindly check the values entered.");
+                    Console.WriteLine("Please kindly check the values");
                 }
             }
         }
