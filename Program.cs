@@ -118,7 +118,7 @@ namespace Exe3_Muhamad_Adri_Muwaffaq_Khamid_141
                             }
                             break;
                         case '4':
-                            break;
+                            return;                          
                     }
                 }
 
